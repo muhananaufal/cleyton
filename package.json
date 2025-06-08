@@ -13,6 +13,7 @@
 		"start": "next start"
 	},
 	"dependencies": {
+		"@hookform/resolvers": "^5.1.0",
 		"@neondatabase/serverless": "^1.0.0",
 		"better-auth": "^1.2.8",
 		"class-variance-authority": "^0.7.1",
@@ -23,7 +24,9 @@
 		"next": "15.3.3",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",
-		"tailwind-merge": "^3.3.0"
+		"react-hook-form": "^7.57.0",
+		"tailwind-merge": "^3.3.0",
+		"zod": "^3.25.56"
 	},
 	"devDependencies": {
 		"@eslint/eslintrc": "^3",
