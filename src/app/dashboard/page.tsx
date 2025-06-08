@@ -1,18 +1,18 @@
-import LoginView from '@/app/modules/login/login';
 import { auth } from '@/lib/auth';
 import { headers } from 'next/headers';
 import { redirect } from 'next/navigation';
+import DashboardView from '../modules/dashboard/dashboard';
 
-async function Login() {
+async function Dashboard() {
 	const session = await auth.api.getSession({
 		headers: await headers(),
 	});
 
-	if (session) {
-		redirect('/dashboard');
+	if (!session) {
+		redirect('/register');
 	}
 
-	return <LoginView />;
+	return <DashboardView />;
 }
 
-export default Login;
+export default Dashboard;
